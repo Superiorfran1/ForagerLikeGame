@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" format=3 uid="uid://0flesnkwa6mu"]
+
+[ext_resource type="Texture2D" uid="uid://blfunn27ae8qq" path="res://Objetos/Arboles/arbolPradera.png" id="1_dyb7m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mu4si"]
+texture = ExtResource("1_dyb7m")
+0:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.5971746, -8, 3.956892, -8, 3.956892, 8, -3.956892, 8)
+
+[resource]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+sources/1 = SubResource("TileSetAtlasSource_mu4si")

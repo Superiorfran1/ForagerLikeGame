@@ -1,1 +1,2 @@
-# ForagerLikeGame
+# forager
+GameJam
