@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dsx51huwp1eko"]
+
+[ext_resource type="Script" uid="uid://u4f4ed01oy8o" path="res://piedra_negra.gd" id="1_q6yqq"]
+[ext_resource type="Texture2D" uid="uid://dok5rvo0q61cg" path="res://sprites/picar_piedra_negra.png" id="2_isxn5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tst1"]
+size = Vector2(10, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hoor3"]
+size = Vector2(22, 24)
+
+[node name="picar_piedraNegra" type="Node2D" unique_id=1909001377 node_paths=PackedStringArray("area")]
+script = ExtResource("1_q6yqq")
+area = NodePath("Area2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1800192291]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=73535626]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_5tst1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=95336411]
+texture = ExtResource("2_isxn5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=714483362]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=758322619]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_hoor3")

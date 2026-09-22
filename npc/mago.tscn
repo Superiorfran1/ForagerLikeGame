@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bbsnghuulfevd"]
+
+[ext_resource type="SpriteFrames" uid="uid://b6as56dk66b7n" path="res://animaciones/mago.tres" id="1_jwcve"]
+[ext_resource type="Script" uid="uid://bn84uwjh14vgn" path="res://npc/mago.gd" id="1_ol1bx"]
+[ext_resource type="FontFile" uid="uid://dqk5vplsknvjj" path="res://fonts/Minecraftia-Regular.ttf" id="3_btqnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol1bx"]
+size = Vector2(28, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btqnm"]
+size = Vector2(79, 82)
+
+[node name="mago" type="CharacterBody2D" unique_id=946509778 node_paths=PackedStringArray("animacion", "area", "mensaje_1", "mensaje_2")]
+script = ExtResource("1_ol1bx")
+animacion = NodePath("AnimatedSprite2D")
+area = NodePath("Area2D")
+mensaje_1 = NodePath("Label")
+mensaje_2 = NodePath("Label2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1334878790]
+sprite_frames = ExtResource("1_jwcve")
+animation = &"mago"
+frame_progress = 0.86000735
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1754044510]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ol1bx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=453371185]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=112641735]
+shape = SubResource("RectangleShape2D_btqnm")
+
+[node name="Label" type="Label" parent="." unique_id=1395962439]
+offset_left = -86.0
+offset_top = -48.0
+offset_right = 89.0
+offset_bottom = -9.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_btqnm")
+theme_override_font_sizes/font_size = 10
+text = "Para salir de aqui tienes que 
+conseguir la brujula"
+
+[node name="Label2" type="Label" parent="." unique_id=1414682852]
+offset_left = -71.0
+offset_top = -47.0
+offset_right = 91.0
+offset_bottom = -8.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_btqnm")
+theme_override_font_sizes/font_size = 10
+text = "Te ayudaria pero no tengo
+tiempo, no te lo tomes mal"

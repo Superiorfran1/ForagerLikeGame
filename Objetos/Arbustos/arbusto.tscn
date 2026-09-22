@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bvhcvwj7a4gly"]
+
+[ext_resource type="Texture2D" uid="uid://v7358opbuuen" path="res://Objetos/Arbustos/arbusto.png" id="1_d7ijb"]
+[ext_resource type="Script" uid="uid://6xuvn2qy4mqg" path="res://Objetos/Arbustos/arbusto.gd" id="1_kru8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kru8w"]
+size = Vector2(8, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cdha"]
+size = Vector2(26, 24)
+
+[node name="Arbusto" type="Node2D" unique_id=561168570 node_paths=PackedStringArray("area")]
+script = ExtResource("1_kru8w")
+area = NodePath("Sprite2D/Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1031061927]
+texture = ExtResource("1_d7ijb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=23986866]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=994219338]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_kru8w")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=767745292]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1544691260]
+shape = SubResource("RectangleShape2D_2cdha")

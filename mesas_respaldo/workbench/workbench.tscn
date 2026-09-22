@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bbxx6lawkewko"]
+
+[ext_resource type="Texture2D" uid="uid://3j8rqq0s4ghh" path="res://sprites/workbech.png" id="1_6tj8g"]
+[ext_resource type="Script" uid="uid://bwt8weclqe1gh" path="res://mesas_respaldo/workbench/workbench.gd" id="1_nsn75"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsn75"]
+size = Vector2(16, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8is8"]
+size = Vector2(44, 46)
+
+[node name="workbench" type="Node2D" unique_id=1171333934]
+script = ExtResource("1_nsn75")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=348482111]
+texture = ExtResource("1_6tj8g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1478007472]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1065729678]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_nsn75")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1678972018]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=2121480406]
+shape = SubResource("RectangleShape2D_k8is8")
+
+[node name="LabelProgreso" type="Label" parent="." unique_id=24957588]
+offset_left = -62.0
+offset_top = -46.0
+offset_right = -22.0
+offset_bottom = -23.0

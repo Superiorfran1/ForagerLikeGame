@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://mp7hrvc3tkri"]
+
+[ext_resource type="Texture2D" uid="uid://b0stv7fre7vtr" path="res://sprites/idle.png" id="1_752fo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t36l1"]
+atlas = ExtResource("1_752fo")
+region = Rect2(0, 0, 18, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slqwn"]
+atlas = ExtResource("1_752fo")
+region = Rect2(18, 0, 18, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50ev1"]
+atlas = ExtResource("1_752fo")
+region = Rect2(36, 0, 18, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgh20"]
+atlas = ExtResource("1_752fo")
+region = Rect2(54, 0, 18, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpps3"]
+atlas = ExtResource("1_752fo")
+region = Rect2(72, 0, 18, 20)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t36l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slqwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50ev1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgh20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpps3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

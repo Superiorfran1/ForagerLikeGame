@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dx0gui2qhv8r0"]
+
+[ext_resource type="Texture2D" uid="uid://nv5evd3061a1" path="res://sprites/walk.png" id="1_qxnxk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11pda"]
+atlas = ExtResource("1_qxnxk")
+region = Rect2(0, 0, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbcs4"]
+atlas = ExtResource("1_qxnxk")
+region = Rect2(16, 0, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uwtf"]
+atlas = ExtResource("1_qxnxk")
+region = Rect2(32, 0, 16, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nsu3"]
+atlas = ExtResource("1_qxnxk")
+region = Rect2(48, 0, 16, 19)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11pda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbcs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4uwtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nsu3")
+}],
+"loop": true,
+"name": &"andar",
+"speed": 12.0
+}]

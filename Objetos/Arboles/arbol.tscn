@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cbb6gv6ckhc3p"]
+
+[ext_resource type="Texture2D" uid="uid://blfunn27ae8qq" path="res://Objetos/Arboles/arbolPradera.png" id="1_f05p8"]
+[ext_resource type="Script" uid="uid://dkl23moe2bdgx" path="res://Objetos/Arboles/arbol.gd" id="1_wtya0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtya0"]
+size = Vector2(9, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ja6d"]
+size = Vector2(24, 43)
+
+[node name="Arbol" type="Node2D" unique_id=2003646163 node_paths=PackedStringArray("area") groups=["arboles"]]
+script = ExtResource("1_wtya0")
+area = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1233717400]
+texture = ExtResource("1_f05p8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=578071198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2029722976]
+position = Vector2(0.5, 8)
+shape = SubResource("RectangleShape2D_wtya0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1892998349]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=535728815]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_8ja6d")

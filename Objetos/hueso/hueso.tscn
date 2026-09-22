@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://fcj6dtqf712e"]
+
+[ext_resource type="Script" uid="uid://bdlkhcv0xvopl" path="res://hueso.gd" id="1_0kj8s"]
+[ext_resource type="Texture2D" uid="uid://cxrg5awb53xq6" path="res://sprites/hueso.png" id="2_d8g7s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_262lc"]
+size = Vector2(12, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf466"]
+size = Vector2(24, 44)
+
+[node name="hueso" type="Node2D" unique_id=928684354 node_paths=PackedStringArray("area")]
+script = ExtResource("1_0kj8s")
+area = NodePath("Area2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=616369961]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1220644418]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_262lc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=233965649]
+texture = ExtResource("2_d8g7s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=962688338]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=638176860]
+shape = SubResource("RectangleShape2D_rf466")

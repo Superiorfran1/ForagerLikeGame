@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://dfnkwcyedhalg"]
+
+[ext_resource type="PackedScene" uid="uid://dchhctsw3asnc" path="res://escenas/desierto.tscn" id="1_sseos"]
+[ext_resource type="PackedScene" uid="uid://6w1brd11ba2a" path="res://escenas/pradera.tscn" id="1_w0gp3"]
+[ext_resource type="PackedScene" uid="uid://bs02xcrfrm3b8" path="res://Personaje/player.tscn" id="2_uotbr"]
+[ext_resource type="PackedScene" uid="uid://cg5d5v1fnrjv3" path="res://escenas/bosque.tscn" id="3_sphhd"]
+[ext_resource type="Script" path="res://escenas/camera_2d.gd" id="3_wsrfr"]
+[ext_resource type="PackedScene" uid="uid://bbsnghuulfevd" path="res://npc/mago.tscn" id="4_esxyf"]
+[ext_resource type="PackedScene" uid="uid://dlitii1yrb2dn" path="res://npc/herrero.tscn" id="7_t23jo"]
+[ext_resource type="PackedScene" uid="uid://x330g07kl1m6" path="res://npc/minero.tscn" id="8_721b2"]
+[ext_resource type="PackedScene" uid="uid://0w6riuhcdpqt" path="res://npc/arqueologa.tscn" id="9_swgb7"]
+[ext_resource type="PackedScene" uid="uid://cbb6gv6ckhc3p" path="res://Objetos/Arboles/arbol.tscn" id="10_swgb7"]
+[ext_resource type="PackedScene" uid="uid://bvhcvwj7a4gly" path="res://Objetos/Arbustos/arbusto.tscn" id="11_sseos"]
+[ext_resource type="PackedScene" uid="uid://70mt5etmqh8u" path="res://Objetos/Arboles/roble.tscn" id="12_e5sd1"]
+[ext_resource type="PackedScene" uid="uid://blidtgfao5d3r" path="res://Objetos/Piedra/piedra.tscn" id="13_hdldp"]
+[ext_resource type="PackedScene" uid="uid://bty2jrb3qkuvh" path="res://Objetos/picar_fotorita/picar_fotorita.tscn" id="14_l503p"]
+[ext_resource type="PackedScene" uid="uid://fcj6dtqf712e" path="res://Objetos/hueso/hueso.tscn" id="15_v3e6x"]
+[ext_resource type="PackedScene" uid="uid://rq88bu7ak705" path="res://Objetos/picar_hierro/hierro_picar.tscn" id="16_w6863"]
+[ext_resource type="PackedScene" uid="uid://dsx51huwp1eko" path="res://Objetos/picar_piedraNegra/picar_piedra_negra.tscn" id="17_w6863"]
+[ext_resource type="PackedScene" uid="uid://dq65qx547h1ax" path="res://mesas_respaldo/horno/horno.tscn" id="19_oc5n3"]
+[ext_resource type="PackedScene" uid="uid://bbxx6lawkewko" path="res://mesas_respaldo/workbench/workbench.tscn" id="19_xy6dh"]
+[ext_resource type="PackedScene" uid="uid://cw052b8d5umc0" path="res://mesas_respaldo/yunque/yunque.tscn" id="20_oc5n3"]
+
+[node name="NodoPadre" type="Node" unique_id=965072859]
+
+[node name="Desierto" parent="." unique_id=102563699 instance=ExtResource("1_sseos")]
+position = Vector2(1312, -336)
+
+[node name="Pradera" parent="." unique_id=1415456114 instance=ExtResource("1_w0gp3")]
+
+[node name="Bosque" parent="." unique_id=426554302 instance=ExtResource("3_sphhd")]
+position = Vector2(496, 16)
+
+[node name="Personaje" parent="." unique_id=185997524 instance=ExtResource("2_uotbr")]
+position = Vector2(-4, 15)
+
+[node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=809132183]
+offset = Vector2(0, 20)
+zoom = Vector2(2.31, 2.31)
+script = ExtResource("3_wsrfr")
+
+[node name="mago" parent="." unique_id=946509778 instance=ExtResource("4_esxyf")]
+position = Vector2(123, 54)
+
+[node name="herrero" parent="." unique_id=785164521 instance=ExtResource("7_t23jo")]
+position = Vector2(430, -16)
+
+[node name="minero" parent="." unique_id=1239830545 instance=ExtResource("8_721b2")]
+position = Vector2(1438, -18)
+
+[node name="arqueologa" parent="." unique_id=888760906 instance=ExtResource("9_swgb7")]
+position = Vector2(1417, -388)
+
+[node name="Arbol" parent="." unique_id=2003646163 instance=ExtResource("10_swgb7")]
+position = Vector2(184, -66)
+
+[node name="Arbol2" parent="." unique_id=1646482471 instance=ExtResource("10_swgb7")]
+position = Vector2(-182, 2)
+
+[node name="Arbol3" parent="." unique_id=1704451569 instance=ExtResource("10_swgb7")]
+position = Vector2(-178, 61)
+
+[node name="Arbol4" parent="." unique_id=1802983281 instance=ExtResource("10_swgb7")]
+position = Vector2(27, 57)
+
+[node name="Arbusto" parent="." unique_id=561168570 instance=ExtResource("11_sseos")]
+position = Vector2(-79, -68)
+
+[node name="Arbusto2" parent="." unique_id=1553160432 instance=ExtResource("11_sseos")]
+position = Vector2(-136, 38)
+
+[node name="Arbusto3" parent="." unique_id=471411709 instance=ExtResource("11_sseos")]
+position = Vector2(-76, 10)
+
+[node name="roble" parent="." unique_id=995041443 instance=ExtResource("12_e5sd1")]
+position = Vector2(882, -32)
+
+[node name="roble2" parent="." unique_id=1109471126 instance=ExtResource("12_e5sd1")]
+position = Vector2(832, 87)
+
+[node name="roble3" parent="." unique_id=413456612 instance=ExtResource("12_e5sd1")]
+position = Vector2(631, -120)
+
+[node name="roble4" parent="." unique_id=1780425543 instance=ExtResource("12_e5sd1")]
+position = Vector2(690, -133)
+
+[node name="roble5" parent="." unique_id=1030763933 instance=ExtResource("12_e5sd1")]
+position = Vector2(1216, -13)
+
+[node name="roble6" parent="." unique_id=1083802959 instance=ExtResource("12_e5sd1")]
+position = Vector2(1408, 58)
+
+[node name="roble7" parent="." unique_id=936585027 instance=ExtResource("12_e5sd1")]
+position = Vector2(1363, -28)
+
+[node name="roble8" parent="." unique_id=1003641443 instance=ExtResource("12_e5sd1")]
+position = Vector2(579, 82)
+
+[node name="Piedra" parent="." unique_id=898987209 instance=ExtResource("13_hdldp")]
+position = Vector2(-90, 64)
+
+[node name="Piedra2" parent="." unique_id=1720843763 instance=ExtResource("13_hdldp")]
+position = Vector2(-20, 74)
+
+[node name="Piedra3" parent="." unique_id=1485657146 instance=ExtResource("13_hdldp")]
+position = Vector2(-41, -57)
+
+[node name="Piedra5" parent="." unique_id=1434549724 instance=ExtResource("13_hdldp")]
+position = Vector2(434, 51)
+
+[node name="Piedra7" parent="." unique_id=280170542 instance=ExtResource("13_hdldp")]
+position = Vector2(-137, 76)
+
+[node name="Piedra8" parent="." unique_id=105582208 instance=ExtResource("13_hdldp")]
+position = Vector2(-186, -72)
+
+[node name="roble9" parent="." unique_id=582260248 instance=ExtResource("12_e5sd1")]
+position = Vector2(574, -19)
+
+[node name="roble10" parent="." unique_id=1723666741 instance=ExtResource("12_e5sd1")]
+position = Vector2(1281, -94)
+
+[node name="hueso" parent="." unique_id=928684354 instance=ExtResource("15_v3e6x")]
+position = Vector2(1039, -560)
+
+[node name="hueso2" parent="." unique_id=1400889188 instance=ExtResource("15_v3e6x")]
+position = Vector2(1001, -574)
+
+[node name="hueso3" parent="." unique_id=1352439227 instance=ExtResource("15_v3e6x")]
+position = Vector2(960, -568)
+
+[node name="picar_fotorita2" parent="." unique_id=1982845213 instance=ExtResource("14_l503p")]
+position = Vector2(1185, -653)
+
+[node name="picar_fotorita3" parent="." unique_id=290970664 instance=ExtResource("14_l503p")]
+position = Vector2(1239, -518)
+
+[node name="picar_fotorita4" parent="." unique_id=666948404 instance=ExtResource("14_l503p")]
+position = Vector2(1429, -517)
+
+[node name="picar_fotorita5" parent="." unique_id=2016919469 instance=ExtResource("14_l503p")]
+position = Vector2(1676, -649)
+
+[node name="hierro_picar" parent="." unique_id=496876407 instance=ExtResource("16_w6863")]
+position = Vector2(876, -70)
+
+[node name="hierro_picar2" parent="." unique_id=1639387437 instance=ExtResource("16_w6863")]
+position = Vector2(1238, 107)
+
+[node name="hierro_picar3" parent="." unique_id=1897662192 instance=ExtResource("16_w6863")]
+position = Vector2(841, -52)
+
+[node name="hierro_picar4" parent="." unique_id=658762591 instance=ExtResource("16_w6863")]
+position = Vector2(704, -70)
+
+[node name="hierro_picar5" parent="." unique_id=1599221814 instance=ExtResource("16_w6863")]
+position = Vector2(528, 54)
+
+[node name="hierro_picar6" parent="." unique_id=959654716 instance=ExtResource("16_w6863")]
+position = Vector2(768, 23)
+
+[node name="picar_piedraNegra" parent="." unique_id=1909001377 instance=ExtResource("17_w6863")]
+position = Vector2(1186, -446)
+
+[node name="picar_piedraNegra2" parent="." unique_id=1959335016 instance=ExtResource("17_w6863")]
+position = Vector2(1298, -629)
+
+[node name="picar_piedraNegra3" parent="." unique_id=1389505162 instance=ExtResource("17_w6863")]
+position = Vector2(1390, -671)
+
+[node name="hueso4" parent="." unique_id=1065921127 instance=ExtResource("15_v3e6x")]
+position = Vector2(1496, -678)
+
+[node name="hueso5" parent="." unique_id=1252382253 instance=ExtResource("15_v3e6x")]
+position = Vector2(1290, -736)
+
+[node name="hueso6" parent="." unique_id=1280768446 instance=ExtResource("15_v3e6x")]
+position = Vector2(1122, -755)
+
+[node name="hueso7" parent="." unique_id=475443343 instance=ExtResource("15_v3e6x")]
+position = Vector2(1109, -702)
+
+[node name="hueso8" parent="." unique_id=306520016 instance=ExtResource("15_v3e6x")]
+position = Vector2(1083, -764)
+
+[node name="hueso9" parent="." unique_id=1601606008 instance=ExtResource("15_v3e6x")]
+position = Vector2(1055, -702)
+
+[node name="hueso10" parent="." unique_id=1140607175 instance=ExtResource("15_v3e6x")]
+position = Vector2(1600, -577)
+
+[node name="hueso11" parent="." unique_id=1897699507 instance=ExtResource("15_v3e6x")]
+position = Vector2(1520, -527)
+
+[node name="hueso12" parent="." unique_id=948991708 instance=ExtResource("15_v3e6x")]
+position = Vector2(1554, -592)
+
+[node name="hueso13" parent="." unique_id=1688056773 instance=ExtResource("15_v3e6x")]
+position = Vector2(1656, -496)
+
+[node name="hueso14" parent="." unique_id=260081335 instance=ExtResource("15_v3e6x")]
+position = Vector2(1572, -513)
+
+[node name="horno" parent="." unique_id=14889564 instance=ExtResource("19_oc5n3")]
+position = Vector2(5, -59)
+
+[node name="workbench" parent="." unique_id=1171333934 instance=ExtResource("19_xy6dh")]
+position = Vector2(68, -56)
+
+[node name="yunque" parent="." unique_id=356452549 instance=ExtResource("20_oc5n3")]
+position = Vector2(134, -52)

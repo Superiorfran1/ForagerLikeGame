@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bty2jrb3qkuvh"]
+
+[ext_resource type="Script" uid="uid://d2yilkf7muc42" path="res://picar_fotorita.gd" id="1_ctxom"]
+[ext_resource type="Texture2D" uid="uid://stpu5wklrwlh" path="res://sprites/picar_fotorita.png" id="2_6yixs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jx26d"]
+size = Vector2(12, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmoxs"]
+size = Vector2(22, 22)
+
+[node name="picar_fotorita" type="Node2D" unique_id=159225611 node_paths=PackedStringArray("area")]
+script = ExtResource("1_ctxom")
+area = NodePath("Area2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1464676548]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=980893729]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_jx26d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=78882919]
+texture = ExtResource("2_6yixs")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=795312657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=249513997]
+shape = SubResource("RectangleShape2D_wmoxs")

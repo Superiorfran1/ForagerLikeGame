@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://0w6riuhcdpqt"]
+
+[ext_resource type="Script" uid="uid://clt6cxhdrhbn2" path="res://npc/arqueologa.gd" id="1_68s2n"]
+[ext_resource type="SpriteFrames" uid="uid://drbiss6m4sshg" path="res://animaciones/arqueologa.tres" id="2_68s2n"]
+[ext_resource type="FontFile" uid="uid://dqk5vplsknvjj" path="res://fonts/Minecraftia-Regular.ttf" id="3_btqnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol1bx"]
+size = Vector2(22, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btqnm"]
+size = Vector2(56, 52)
+
+[node name="arqueologa" type="CharacterBody2D" unique_id=946509778 node_paths=PackedStringArray("animacion", "area", "mensaje_1", "mensaje_2")]
+script = ExtResource("1_68s2n")
+animacion = NodePath("AnimatedSprite2D")
+area = NodePath("Area2D")
+mensaje_1 = NodePath("Label")
+mensaje_2 = NodePath("Label2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1334878790]
+sprite_frames = ExtResource("2_68s2n")
+animation = &"arqueologa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1754044510]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_ol1bx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=453371185]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=112641735]
+shape = SubResource("RectangleShape2D_btqnm")
+
+[node name="Label" type="Label" parent="." unique_id=1395962439]
+offset_left = -94.0
+offset_top = -42.0
+offset_right = 97.0
+offset_bottom = -24.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_btqnm")
+theme_override_font_sizes/font_size = 10
+text = "¿Tambien te gustan los fosiles?"
+
+[node name="Label2" type="Label" parent="." unique_id=1030362737]
+z_index = 2
+offset_left = -85.0
+offset_top = -53.0
+offset_right = 86.0
+offset_bottom = -14.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_btqnm")
+theme_override_font_sizes/font_size = 10
+text = "Puedes cojer las costillas, 
+las cabezas dejalas para mi"

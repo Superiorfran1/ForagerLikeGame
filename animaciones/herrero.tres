@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cby6thfnstvdj"]
+
+[ext_resource type="Texture2D" uid="uid://buw7k0kly6p7x" path="res://sprites/herrero.png" id="1_rp3tc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqwe7"]
+atlas = ExtResource("1_rp3tc")
+region = Rect2(0, 0, 26, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fpqy"]
+atlas = ExtResource("1_rp3tc")
+region = Rect2(26, 0, 26, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v08d"]
+atlas = ExtResource("1_rp3tc")
+region = Rect2(52, 0, 26, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amar7"]
+atlas = ExtResource("1_rp3tc")
+region = Rect2(78, 0, 26, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqv6d"]
+atlas = ExtResource("1_rp3tc")
+region = Rect2(104, 0, 26, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3s17"]
+atlas = ExtResource("1_rp3tc")
+region = Rect2(130, 0, 26, 20)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqwe7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fpqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v08d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amar7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqv6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3s17")
+}],
+"loop": true,
+"name": &"herrero",
+"speed": 5.0
+}]

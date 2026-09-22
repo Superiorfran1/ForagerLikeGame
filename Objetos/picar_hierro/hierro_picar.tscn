@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://rq88bu7ak705"]
+
+[ext_resource type="Script" uid="uid://bku0swot4o8o2" path="res://hierro_picar.gd" id="1_r2vyk"]
+[ext_resource type="Texture2D" uid="uid://biumaqa4xine4" path="res://sprites/hierro_picar.png" id="2_vqupn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gusyv"]
+size = Vector2(12, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_we86k"]
+size = Vector2(20, 21)
+
+[node name="hierro_picar" type="Node2D" unique_id=496876407 node_paths=PackedStringArray("area")]
+script = ExtResource("1_r2vyk")
+area = NodePath("Area2D")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=80930431]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=628145967]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_gusyv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1245898330]
+position = Vector2(0, 0.5)
+scale = Vector2(1, 1.0555556)
+texture = ExtResource("2_vqupn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1593996108]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1744949592]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_we86k")

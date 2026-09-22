@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bx4jf786hmsky"]
+
+[ext_resource type="Texture2D" uid="uid://dqijgpr4jsgdk" path="res://sprites/minero.png" id="1_sap1x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lecmk"]
+atlas = ExtResource("1_sap1x")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44p0s"]
+atlas = ExtResource("1_sap1x")
+region = Rect2(20, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am84d"]
+atlas = ExtResource("1_sap1x")
+region = Rect2(40, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yftk"]
+atlas = ExtResource("1_sap1x")
+region = Rect2(60, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7ygt"]
+atlas = ExtResource("1_sap1x")
+region = Rect2(80, 0, 20, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lecmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44p0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am84d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yftk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7ygt")
+}],
+"loop": true,
+"name": &"minero",
+"speed": 5.0
+}]

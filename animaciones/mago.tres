@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b6as56dk66b7n"]
+
+[ext_resource type="Texture2D" uid="uid://dhvuq81jwpe5d" path="res://sprites/mago.png" id="1_3pk5b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jchll"]
+atlas = ExtResource("1_3pk5b")
+region = Rect2(0, 0, 32, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpi3i"]
+atlas = ExtResource("1_3pk5b")
+region = Rect2(32, 0, 32, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66ca0"]
+atlas = ExtResource("1_3pk5b")
+region = Rect2(64, 0, 32, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_800xf"]
+atlas = ExtResource("1_3pk5b")
+region = Rect2(96, 0, 32, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jchll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpi3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66ca0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_800xf")
+}],
+"loop": true,
+"name": &"mago",
+"speed": 5.0
+}]

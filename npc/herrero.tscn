@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dlitii1yrb2dn"]
+
+[ext_resource type="Script" uid="uid://cnwm8gbungurl" path="res://npc/herrero.gd" id="1_obfad"]
+[ext_resource type="SpriteFrames" uid="uid://cby6thfnstvdj" path="res://animaciones/herrero.tres" id="2_obfad"]
+[ext_resource type="FontFile" uid="uid://dqk5vplsknvjj" path="res://fonts/Minecraftia-Regular.ttf" id="3_btqnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol1bx"]
+size = Vector2(25, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btqnm"]
+size = Vector2(62, 56)
+
+[node name="herrero" type="CharacterBody2D" unique_id=946509778 node_paths=PackedStringArray("animacion", "area", "mensaje_1", "mensaje_2")]
+script = ExtResource("1_obfad")
+animacion = NodePath("AnimatedSprite2D")
+area = NodePath("Area2D")
+mensaje_1 = NodePath("Label")
+mensaje_2 = NodePath("Label2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1334878790]
+sprite_frames = ExtResource("2_obfad")
+animation = &"herrero"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1754044510]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ol1bx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=453371185]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=112641735]
+shape = SubResource("RectangleShape2D_btqnm")
+
+[node name="Label" type="Label" parent="." unique_id=1395962439]
+z_index = 2
+offset_left = -95.0
+offset_top = -48.0
+offset_right = 98.0
+offset_bottom = -9.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_btqnm")
+theme_override_font_sizes/font_size = 10
+text = "Te has fijado que no se pueden 
+talar los arboles mas oscuros"
+
+[node name="Label2" type="Label" parent="." unique_id=1469743277]
+z_index = 2
+offset_left = -62.0
+offset_top = -48.0
+offset_right = 64.0
+offset_bottom = -9.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_btqnm")
+theme_override_font_sizes/font_size = 10
+text = "Yo corte uno y tarde
+mas de dos dias"

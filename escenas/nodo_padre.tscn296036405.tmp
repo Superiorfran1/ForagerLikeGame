@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dfnkwcyedhalg"]
+
+[ext_resource type="PackedScene" uid="uid://dchhctsw3asnc" path="res://escenas/desierto.tscn" id="1_sseos"]
+[ext_resource type="PackedScene" uid="uid://6w1brd11ba2a" path="res://escenas/pradera.tscn" id="1_w0gp3"]
+[ext_resource type="PackedScene" uid="uid://bs02xcrfrm3b8" path="res://Personaje/player.tscn" id="2_uotbr"]
+[ext_resource type="PackedScene" uid="uid://bghuan8chbxlx" path="res://escenas/bosque.tscn" id="3_sphhd"]
+[ext_resource type="Script" uid="uid://d1r2tbb26spjf" path="res://escenas/camera_2d.gd" id="3_wsrfr"]
+[ext_resource type="PackedScene" uid="uid://bbsnghuulfevd" path="res://npc/mago.tscn" id="4_esxyf"]
+[ext_resource type="PackedScene" uid="uid://dlitii1yrb2dn" path="res://npc/herrero.tscn" id="7_t23jo"]
+[ext_resource type="PackedScene" uid="uid://x330g07kl1m6" path="res://npc/minero.tscn" id="8_721b2"]
+[ext_resource type="PackedScene" uid="uid://0w6riuhcdpqt" path="res://npc/arqueologa.tscn" id="9_swgb7"]
+[ext_resource type="PackedScene" uid="uid://cbb6gv6ckhc3p" path="res://Objetos/Arboles/arbol.tscn" id="10_swgb7"]
+[ext_resource type="PackedScene" uid="uid://bvhcvwj7a4gly" path="res://Objetos/Arbustos/arbusto.tscn" id="11_sseos"]
+
+[sub_resource type="GDScript" id="GDScript_sseos"]
+
+[node name="NodoPadre" type="Node" unique_id=965072859]
+
+[node name="Desierto" parent="." unique_id=102563699 instance=ExtResource("1_sseos")]
+position = Vector2(1312, -336)
+
+[node name="Pradera" parent="." unique_id=1415456114 instance=ExtResource("1_w0gp3")]
+
+[node name="Bosque" parent="." unique_id=426554302 instance=ExtResource("3_sphhd")]
+position = Vector2(496, 16)
+
+[node name="Personaje" parent="." unique_id=185997524 instance=ExtResource("2_uotbr")]
+
+[node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=809132183]
+offset = Vector2(0, 20)
+zoom = Vector2(2.31, 2.31)
+script = ExtResource("3_wsrfr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=350682248]
+script = SubResource("GDScript_sseos")
+
+[node name="mago" parent="." unique_id=946509778 instance=ExtResource("4_esxyf")]
+position = Vector2(117, 45)
+
+[node name="herrero" parent="." unique_id=785164521 instance=ExtResource("7_t23jo")]
+position = Vector2(1386, -165)
+
+[node name="minero" parent="." unique_id=1239830545 instance=ExtResource("8_721b2")]
+position = Vector2(567, 13)
+
+[node name="arqueologa" parent="." unique_id=888760906 instance=ExtResource("9_swgb7")]
+position = Vector2(631, 12)
+
+[node name="Arbol" parent="." unique_id=2003646163 instance=ExtResource("10_swgb7")]
+position = Vector2(-102, -20)
+
+[node name="Arbol2" parent="." unique_id=1646482471 instance=ExtResource("10_swgb7")]
+position = Vector2(141, -61)
+
+[node name="Arbol3" parent="." unique_id=1704451569 instance=ExtResource("10_swgb7")]
+position = Vector2(-168, 85)
+
+[node name="Arbol4" parent="." unique_id=1802983281 instance=ExtResource("10_swgb7")]
+position = Vector2(12, 77)
+
+[node name="Arbusto" parent="." unique_id=561168570 instance=ExtResource("11_sseos")]
+position = Vector2(-103, 48)
+
+[node name="Arbusto2" parent="." unique_id=1553160432 instance=ExtResource("11_sseos")]
+position = Vector2(34, -67)
+
+[node name="Arbusto3" parent="." unique_id=471411709 instance=ExtResource("11_sseos")]
+position = Vector2(-152, -67)

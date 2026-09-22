@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cw052b8d5umc0"]
+
+[ext_resource type="Script" uid="uid://b2v8qns6lm6ex" path="res://mesas/yunque/yunque.gd" id="1_0w17y"]
+[ext_resource type="Texture2D" uid="uid://divfynaeebjk8" path="res://sprites/yunque.png" id="1_sd2au"]
+[ext_resource type="FontFile" uid="uid://dqk5vplsknvjj" path="res://fonts/Minecraftia-Regular.ttf" id="3_7msx7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hru1"]
+size = Vector2(22, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ivjk"]
+size = Vector2(52, 44)
+
+[node name="yunque" type="Node2D" unique_id=356452549]
+script = ExtResource("1_0w17y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2114103364]
+texture = ExtResource("1_sd2au")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1914669012]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1562364722]
+shape = SubResource("RectangleShape2D_7hru1")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1400798472]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1823212061]
+shape = SubResource("RectangleShape2D_6ivjk")
+
+[node name="LabelReceta" type="Label" parent="." unique_id=1664610556]
+z_index = 2
+offset_left = 22.0
+offset_top = -46.0
+offset_right = 62.0
+offset_bottom = -23.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_7msx7")
+theme_override_font_sizes/font_size = 10
+
+[node name="LabelProgreso" type="Label" parent="." unique_id=1978980517]
+visible = false
+offset_left = -62.0
+offset_top = -46.0
+offset_right = -22.0
+offset_bottom = -23.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_7msx7")
+theme_override_font_sizes/font_size = 10

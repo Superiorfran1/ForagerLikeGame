@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://drbiss6m4sshg"]
+
+[ext_resource type="Texture2D" uid="uid://didw0d8ksmqr5" path="res://sprites/arqueologa.png" id="1_ovbfe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bldyu"]
+atlas = ExtResource("1_ovbfe")
+region = Rect2(0, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trv4v"]
+atlas = ExtResource("1_ovbfe")
+region = Rect2(26, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f07gx"]
+atlas = ExtResource("1_ovbfe")
+region = Rect2(52, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c6x0"]
+atlas = ExtResource("1_ovbfe")
+region = Rect2(78, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbwiq"]
+atlas = ExtResource("1_ovbfe")
+region = Rect2(104, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcx53"]
+atlas = ExtResource("1_ovbfe")
+region = Rect2(130, 0, 26, 26)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bldyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trv4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f07gx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c6x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbwiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcx53")
+}],
+"loop": true,
+"name": &"arqueologa",
+"speed": 5.0
+}]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dq65qx547h1ax"]
+
+[ext_resource type="Texture2D" uid="uid://decpfiai71sko" path="res://sprites/horno.png" id="1_jexsu"]
+[ext_resource type="Script" uid="uid://c4otodoa7uev" path="res://mesas_respaldo/horno/horno.gd" id="1_smlyq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0iapi"]
+size = Vector2(12, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6shh4"]
+size = Vector2(44, 62)
+
+[node name="horno" type="Node2D" unique_id=14889564]
+script = ExtResource("1_smlyq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1271494344]
+texture = ExtResource("1_jexsu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1143498443]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1817995136]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_0iapi")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=912578653]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1880309526]
+shape = SubResource("RectangleShape2D_6shh4")
+
+[node name="LabelProgreso" type="Label" parent="." unique_id=735340732]
+offset_left = -19.0
+offset_top = -40.0
+offset_right = 21.0
+offset_bottom = -17.0

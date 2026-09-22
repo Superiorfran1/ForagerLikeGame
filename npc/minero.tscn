@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://x330g07kl1m6"]
+
+[ext_resource type="Script" uid="uid://do56bip7ptxo3" path="res://npc/minero.gd" id="1_klohl"]
+[ext_resource type="SpriteFrames" uid="uid://bx4jf786hmsky" path="res://animaciones/minero.tres" id="2_klohl"]
+[ext_resource type="FontFile" uid="uid://dqk5vplsknvjj" path="res://fonts/Minecraftia-Regular.ttf" id="3_btqnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol1bx"]
+size = Vector2(18, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btqnm"]
+size = Vector2(56, 48)
+
+[node name="minero" type="CharacterBody2D" unique_id=946509778 node_paths=PackedStringArray("animacion", "area", "mensaje")]
+script = ExtResource("1_klohl")
+animacion = NodePath("AnimatedSprite2D")
+area = NodePath("Area2D")
+mensaje = NodePath("Label")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1334878790]
+sprite_frames = ExtResource("2_klohl")
+animation = &"minero"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1754044510]
+position = Vector2(-1, 1.5)
+shape = SubResource("RectangleShape2D_ol1bx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=453371185]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=112641735]
+shape = SubResource("RectangleShape2D_btqnm")
+
+[node name="Label" type="Label" parent="." unique_id=1395962439]
+z_index = 2
+offset_left = -14.0
+offset_top = -37.0
+offset_right = 12.0
+offset_bottom = -19.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_btqnm")
+theme_override_font_sizes/font_size = 10
+text = "Hola"
